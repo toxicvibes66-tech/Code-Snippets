@@ -16,7 +16,7 @@ npm install
 npm start
 ```
 
-Open http://localhost:3000. Create an account from the Login page. Template-library and dashboard pages require a valid server session.
+Open the exact local URL printed by the server. It starts on port 3000 and automatically tries the next port if that port is already occupied. Create an account from the Login page. Template-library and dashboard pages require a valid server session.
 
 ## Tests
 

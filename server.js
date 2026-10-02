@@ -440,9 +440,33 @@ function createApp(options = {}) {
 }
 
 if (require.main === module) {
-  const port = Number.parseInt(process.env.PORT || '3000', 10);
   const app = createApp();
-  app.listen(port, () => console.log(`Snippet Studio backend running on http://localhost:${port}`));
+  const configuredPort = process.env.PORT ? Number.parseInt(process.env.PORT, 10) : 3000;
+  const allowFallback = !process.env.PORT;
+
+  function listen(port) {
+    const server = app.listen(port, () => {
+      const actualPort = server.address().port;
+      console.log(`Snippet Studio backend running on http://localhost:${actualPort}`);
+    });
+
+    server.on('error', (error) => {
+      if (error.code === 'EADDRINUSE' && allowFallback && port < 65535) {
+        console.warn(`Port ${port} is already in use; trying ${port + 1}.`);
+        listen(port + 1);
+        return;
+      }
+      console.error(`Could not start Snippet Studio on port ${port}: ${error.message}`);
+      process.exitCode = 1;
+    });
+  }
+
+  if (!Number.isInteger(configuredPort) || configuredPort < 0 || configuredPort > 65535) {
+    console.error('PORT must be a number between 0 and 65535.');
+    process.exitCode = 1;
+  } else {
+    listen(configuredPort);
+  }
 }
 
 module.exports = { createApp };
