@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML template library from Snippet Studio">
+    <title>HTML Templates | Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="index.html#templates">Templates</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero template-page-hero">
+                <p class="eyebrow">HTML library</p>
+                <h1>Reusable HTML snippets for real projects.</h1>
+                <p>Browse clean, production-ready patterns for layouts, forms, media, and advanced components—without leaving the same design system used across the whole site.</p>
+            </section>
+
+            <section class="template-toolbar">
+                <div class="search-wrap compact-search">
+                    <input type="text" id="search" placeholder="Search HTML templates..." aria-label="Search templates">
+                </div>
+
+                <button type="button" class="menu-btn" id="sidebarToggle">Collapse</button>
+            </section>
+
+            <div class="layout template-layout" id="templateLayout">
+                <aside id="sidebar" class="template-sidebar">
+                    <div class="sidebar-header">
+                        <h3>Community</h3>
+                        <span class="live-pill"><span class="live-dot"></span> Live</span>
+                    </div>
+                    <a href="index.html">Home</a>
+                    <a href="#basics">HTML Basics</a>
+                    <a href="#forms">Forms</a>
+                    <a href="#layout">Layout</a>
+                    <a href="#media">Media</a>
+                    <a href="#advanced">Advanced</a>
+                    <a href="#css">Link CSS</a>
+                    <a href="javascript.html">Javascript</a>
+                    <div class="mini-sidebar-stats">
+                        <div>
+                            <span>Online</span>
+                            <strong id="onlineUsers">1,482</strong>
+                        </div>
+                        <div>
+                            <span>Shared</span>
+                            <strong id="sharedTemplates">326</strong>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="template-content">
+                    <div class="stats template-stats">
+                        <div class="stat">
+                            <strong id="templateTotal">20+</strong>
+                            <span>Templates</span>
+                        </div>
+                        <div class="stat">
+                            <strong>6</strong>
+                            <span>Categories</span>
+                        </div>
+                        <div class="stat">
+                            <strong id="reviewTotal">100%</strong>
+                            <span>Community quality</span>
+                        </div>
+                    </div>
+
+                    <section class="community-overview">
+                        <div class="community-card">
+                            <span class="label">Live users</span>
+                            <strong id="liveUsersCount">1,482</strong>
+                            <small>currently exploring snippets</small>
+                        </div>
+                        <div class="community-card">
+                            <span class="label">Templates available</span>
+                            <strong id="templatesAvailableCount">326</strong>
+                            <small>shared by creators today</small>
+                        </div>
+                        <div class="community-card">
+                            <span class="label">Reviews posted</span>
+                            <strong id="reviewsPostedCount">1,208</strong>
+                            <small>community feedback and ratings</small>
+                        </div>
+                    </section>
+
+                    <section class="creator-dashboard">
+                        <div class="profile-card">
+                            <div class="profile-top">
+                                <div class="profile-avatar">AV</div>
+                                <div>
+                                    <h3>Ava Victor</h3>
+                                    <p>@avacodes</p>
+                                </div>
+                            </div>
+                            <p class="profile-bio">Designing premium interfaces and reusable component systems for teams that move fast.</p>
+                            <div class="profile-stats">
+                                <div>
+                                    <strong>48</strong>
+                                    <span>Posts</span>
+                                </div>
+                                <div>
+                                    <strong>12.4k</strong>
+                                    <span>Followers</span>
+                                </div>
+                                <div>
+                                    <strong>324</strong>
+                                    <span>Following</span>
+                                </div>
+                            </div>
+                            <button type="button" class="secondary-btn profile-follow">Following</button>
+                        </div>
+
+                        <div class="notification-panel">
+                            <div class="panel-head">
+                                <p class="eyebrow secondary">Alerts</p>
+                                <h3>Notifications</h3>
+                            </div>
+                            <div id="notificationList" class="notification-list">
+                                <div class="notification-item unread">
+                                    <span class="dot"></span>
+                                    <div>
+                                        <strong>Nia Brooks</strong>
+                                        <p>published a new pricing section template.</p>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <span class="dot"></span>
+                                    <div>
+                                        <strong>Jules</strong>
+                                        <p>left a new review on your hero layout.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="followers-panel">
+                            <div class="panel-head">
+                                <p class="eyebrow secondary">Network</p>
+                                <h3>Following</h3>
+                            </div>
+                            <div id="followersList" class="followers-list">
+                                <button type="button" class="follow-user active" data-user="Nia Brooks">Nia Brooks</button>
+                                <button type="button" class="follow-user active" data-user="Theo Miles">Theo Miles</button>
+                                <button type="button" class="follow-user" data-user="Mila Hart">Mila Hart</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="community-forms">
+                        <div class="publish-panel">
+                            <div class="panel-head">
+                                <p class="eyebrow secondary">Publish</p>
+                                <h3>Share your own template</h3>
+                            </div>
+                            <form id="serverPublishTemplateForm" class="publish-form">
+                                <div class="input-row two-up">
+                                    <label>
+                                        <span>Template title</span>
+                                        <input type="text" id="templateTitle" placeholder="e.g. Pricing Feature Section" required>
+                                    </label>
+                                    <label>
+                                        <span>Category</span>
+                                        <select id="templateCategory" required>
+                                            <option value="landing">Landing</option>
+                                            <option value="saas">SaaS</option>
+                                            <option value="dashboard">Dashboard</option>
+                                            <option value="marketing">Marketing</option>
+                                            <option value="basic">Basic</option>
+                                            <option value="forms">Forms</option>
+                                            <option value="layout">Layout</option>
+                                            <option value="media">Media</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <label>
+                                    <span>Description</span>
+                                    <textarea id="templateDescription" rows="3" placeholder="Explain what this snippet does and when to use it..." required></textarea>
+                                </label>
+                                <label>
+                                    <span>Code snippet</span>
+                                    <textarea id="templateCode" rows="6" placeholder="Paste your HTML code here..." required></textarea>
+                                </label>
+                                <button type="submit" class="primary-btn">Publish template</button>
+                            </form>
+                        </div>
+
+                        <div class="review-panel">
+                            <div class="panel-head">
+                                <p class="eyebrow secondary">Reviews</p>
+                                <h3>Community feedback</h3>
+                            </div>
+                            <div id="communityReviews" class="comment-list">
+                                <article class="comment-item">
+                                    <div class="avatar">A</div>
+                                    <div>
+                                        <h4>Amara</h4>
+                                        <p>Clean layout and easy to customize. The login structure is especially solid.</p>
+                                    </div>
+                                </article>
+                                <article class="comment-item">
+                                    <div class="avatar alt">J</div>
+                                    <div>
+                                        <h4>Jules</h4>
+                                        <p>Excellent starter kit for landing pages. The modal example feels polished.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <form id="serverReviewForm" class="review-form">
+                                <textarea id="reviewMessage" rows="3" placeholder="Leave a helpful review..." required></textarea>
+                                <button type="submit" class="secondary-btn">Post review</button>
+                            </form>
+                        </div>
+                    </section>
+
+                    <section class="workspace-panel" aria-label="Coding workspace">
+                        <div class="workspace-header">
+                            <div>
+                                <p class="eyebrow secondary">Workspace</p>
+                                <h3>Coding Studio</h3>
+                            </div>
+                            <div class="tab-pills">
+                                <span class="tab-pill active">index.html</span>
+                                <span class="tab-pill">style.css</span>
+                                <span class="tab-pill">app.js</span>
+                            </div>
+                        </div>
+
+                        <div class="workspace-body">
+                            <aside class="workspace-sidebar">
+                                <div class="project-folder active">src</div>
+                                <div class="project-folder">components</div>
+                                <div class="project-folder">assets</div>
+                                <div class="project-folder">snippets</div>
+                            </aside>
+
+                            <div class="workspace-editor">
+                                <div class="editor-toolbar">
+                                    <span class="editor-dot red"></span>
+                                    <span class="editor-dot yellow"></span>
+                                    <span class="editor-dot green"></span>
+                                </div>
+                                <pre class="editor-code"><span class="token purple">&lt;section</span> <span class="token blue">class</span>=<span class="token green">"hero"</span><span class="token purple">&gt;</span>
+  <span class="token purple">&lt;nav</span> <span class="token blue">class</span>=<span class="token green">"nav"</span><span class="token purple">&gt;</span>
+    <span class="token purple">&lt;a</span> <span class="token blue">href</span>=<span class="token green">"#features"</span><span class="token purple">&gt;</span>Features<span class="token purple">&lt;/a&gt;</span>
+    <span class="token purple">&lt;a</span> <span class="token blue">href</span>=<span class="token green">"#pricing"</span><span class="token purple">&gt;</span>Pricing<span class="token purple">&lt;/a&gt;</span>
+  <span class="token purple">&lt;/nav&gt;</span>
+  <span class="token purple">&lt;div</span> <span class="token blue">class</span>=<span class="token green">"cta"</span><span class="token purple">&gt;</span>
+    <span class="token purple">&lt;h1&gt;</span>Launch smarter.<span class="token purple">&lt;/h1&gt;</span>
+    <span class="token purple">&lt;p&gt;</span>Build premium product pages in minutes.<span class="token purple">&lt;/p&gt;</span>
+  <span class="token purple">&lt;/div&gt;</span>
+<span class="token purple">&lt;/section&gt;</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="categories">
+                        <button type="button" class="category-active active" data-filter="all">All</button>
+                        <button type="button" class="category-active" data-filter="landing">Landing</button>
+                        <button type="button" class="category-active" data-filter="saas">SaaS</button>
+                        <button type="button" class="category-active" data-filter="dashboard">Dashboard</button>
+                        <button type="button" class="category-active" data-filter="marketing">Marketing</button>
+                        <button type="button" class="category-active" data-filter="basic">Basic</button>
+                        <button type="button" class="category-active" data-filter="forms">Forms</button>
+                        <button type="button" class="category-active" data-filter="layout">Layout</button>
+                        <button type="button" class="category-active" data-filter="media">Media</button>
+                        <button type="button" class="category-active" data-filter="advanced">Advanced</button>
+                    </div>
+
+                    <div class="templates" id="templates">
+                        <article class="templates-card" data-category="basic">
+                            <div class="card-top">
+                                <span class="tag">BASIC</span>
+                                <h2>HTML Boilerplate</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>The universal structure needed for almost every HTML page.</p>
+                                <pre class="code" id="code1">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello world&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code1">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code1">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="basic">
+                            <div class="card-top">
+                                <span class="tag">BASIC</span>
+                                <h2>Heading + Paragraph</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Simple content section for introducing ideas and value.</p>
+                                <pre class="code" id="code2">&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;p&gt;This is my website&lt;/p&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code2">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code2">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="forms">
+                            <div class="card-top">
+                                <span class="tag">FORMS</span>
+                                <h2>Login Form</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>The basic login form structure for product or admin dashboards.</p>
+                                <pre class="code" id="code3">&lt;form&gt;
+  &lt;input type="email" placeholder="Email"&gt;
+  &lt;input type="password" placeholder="Password"&gt;
+  &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code3">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code3">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="layout">
+                            <div class="card-top">
+                                <span class="tag">LAYOUT</span>
+                                <h2>Website Structure</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Semantic structure for pages with header, nav, main content, and footer.</p>
+                                <pre class="code" id="code4">&lt;header&gt;Website header&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;Content&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code4">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code4">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="media">
+                            <div class="card-top">
+                                <span class="tag">MEDIA</span>
+                                <h2>Image</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Add visual elements to your layout with accessible alt text.</p>
+                                <pre class="code" id="code5">&lt;img src="img.jpeg" alt="My image" width="300"&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code5">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code5">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="advanced">
+                            <div class="card-top">
+                                <span class="tag">ADVANCED</span>
+                                <h2>Modal</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Build a popup or lightbox pattern for alerts, confirmations, or onboarding.</p>
+                                <pre class="code" id="code6">&lt;div class="modal"&gt;
+  &lt;div class="modal-box"&gt;
+    &lt;h2&gt;Hello&lt;/h2&gt;
+    &lt;p&gt;Modal content&lt;/p&gt;
+    &lt;button&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code6">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code6">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="forms">
+                            <div class="card-top">
+                                <span class="tag">FORMS</span>
+                                <h2>Signup Form</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Registration layout for new accounts and waiting lists.</p>
+                                <pre class="code" id="code7">&lt;input type="text" placeholder="Full name"&gt;
+&lt;input type="email" placeholder="Email"&gt;
+&lt;input type="password" placeholder="Password"&gt;
+&lt;button&gt;Create account&lt;/button&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code7">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code7">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="layout">
+                            <div class="card-top">
+                                <span class="tag">LAYOUT</span>
+                                <h2>Content Card</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Reusable content card for features, testimonials, and quick summaries.</p>
+                                <pre class="code" id="code8">&lt;article class="card"&gt;
+  &lt;h2&gt;Card Title&lt;/h2&gt;
+  &lt;p&gt;Card description&lt;/p&gt;
+  &lt;button&gt;Learn more&lt;/button&gt;
+&lt;/article&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code8">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code8">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="layout">
+                            <div class="card-top">
+                                <span class="tag">LAYOUT</span>
+                                <h2>Website Landing Page</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Full hero section with call-to-action, trust stats, and product features for SaaS brands.</p>
+                                <pre class="code" id="code9">&lt;header class="topbar"&gt;
+  &lt;nav&gt;Home Features Pricing&lt;/nav&gt;
+  &lt;button&gt;Get started&lt;/button&gt;
+&lt;/header&gt;
+&lt;section class="hero"&gt;
+  &lt;h1&gt;Grow faster with better UX&lt;/h1&gt;
+  &lt;p&gt;Turn product ideas into polished launches.&lt;/p&gt;
+&lt;/section&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code9">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code9">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="layout">
+                            <div class="card-top">
+                                <span class="tag">LAYOUT</span>
+                                <h2>Feature Grid Section</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>Tidy three-column feature layout for product highlights, benefits, and trust signals.</p>
+                                <pre class="code" id="code10">&lt;section class="features"&gt;
+  &lt;div class="feature"&gt;Speed&lt;/div&gt;
+  &lt;div class="feature"&gt;Design&lt;/div&gt;
+  &lt;div class="feature"&gt;Growth&lt;/div&gt;
+&lt;/section&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code10">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code10">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-category="forms">
+                            <div class="card-top">
+                                <span class="tag">FORMS</span>
+                                <h2>Subscription CTA</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>High-conversion callout for newsletters, beta access, and product waitlists.</p>
+                                <pre class="code" id="code11">&lt;form class="signup"&gt;
+  &lt;input type="email" placeholder="Email address"&gt;
+  &lt;button type="submit"&gt;Join now&lt;/button&gt;
+&lt;/form&gt;</pre>
+                                <div class="actions">
+                                    <button type="button" class="btn copy-btn" data-copy="code11">Copy</button>
+                                    <button type="button" class="btn preview-btn" data-code="code11">Preview</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="noResults">
+                        <h2>No Templates found</h2>
+                        <p>Try searching for another template.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal" id="previewModal">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <h2>Template Preview</h2>
+                    <button type="button" class="close" id="closePreviewBtn">×</button>
+                </div>
+                <div id="previewContent"></div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <p>© 2026 Snippet Studio. Crafted for ambitious creators.</p>
+            <a href="index.html">Back home</a>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script src="community.js"></script>
+</body>
+</html>

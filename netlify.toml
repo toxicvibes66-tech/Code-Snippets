@@ -1,0 +1,70 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/faqs"
+  to = "/faqs.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/forgot"
+  to = "/forgot.html"
+  status = 200
+
+[[redirects]]
+  from = "/html"
+  to = "/html.html"
+  status = 200
+
+[[redirects]]
+  from = "/css"
+  to = "/css.html"
+  status = 200
+
+[[redirects]]
+  from = "/javascript"
+  to = "/javascript.html"
+  status = 200
+
+[[redirects]]
+  from = "/php"
+  to = "/php.html"
+  status = 200
+
+[[redirects]]
+  from = "/python"
+  to = "/python.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"

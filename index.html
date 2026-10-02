@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern template platform for web designers and developers">
+    <title>Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="#templates">Templates</a>
+                <a href="#features">Features</a>
+                <a href="#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <div class="live-clock-wrap" aria-live="polite">
+                    <span class="live-pulse"></span>
+                    <span id="liveClock">--:--:--</span>
+                </div>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Built for modern creators</p>
+                    <h1>Turn code snippets into premium digital experiences.</h1>
+                    <p class="hero-text">
+                        Design faster with a curated library of high-performing HTML, CSS, JavaScript, PHP,
+                        and Python templates built to help teams launch polished products without the usual friction.
+                    </p>
+
+                    <div class="hero-badges" aria-label="Highlights">
+                        <span class="chip active">AI-curated</span>
+                        <span class="chip">Realtime sync</span>
+                        <span class="chip">+38% conversion</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#templates" class="primary-btn">Explore templates</a>
+                        <button type="button" class="secondary-btn preview-trigger" data-preview="hero-snippet">Live preview</button>
+                        <a href="login.html" class="secondary-btn">Get started</a>
+                    </div>
+
+                    <ul class="hero-metrics" aria-label="Website stats">
+                        <li>
+                            <strong>8.4k+</strong>
+                            <span>Monthly users</span>
+                        </li>
+                        <li>
+                            <strong>320+</strong>
+                            <span>Ready-made kits</span>
+                        </li>
+                        <li>
+                            <strong>99.9%</strong>
+                            <span>Uptime</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual" aria-label="Template preview card">
+                    <div class="glass-card main-card">
+                        <div class="card-top">
+                            <span class="dot red"></span>
+                            <span class="dot amber"></span>
+                            <span class="dot green"></span>
+                        </div>
+
+                        <div class="code-window">
+                            <div class="code-line"><span class="token purple">const</span> launch = <span class="token green">"ready"</span>;</div>
+                            <div class="code-line"><span class="token purple">let</span> style = <span class="token green">"premium"</span>;</div>
+                            <div class="code-line"><span class="token purple">return</span> <span class="token blue">buildGrowth</span>(launch, style);</div>
+                        </div>
+                    </div>
+
+                    <div class="mini-panel panel-a">
+                        <span class="panel-label">Launch speed</span>
+                        <strong>4.2x faster</strong>
+                    </div>
+
+                    <div class="mini-panel panel-b">
+                        <span class="panel-label">Conversion uplift</span>
+                        <strong>+38%</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section id="templates" class="template-section" data-community="false">
+                <div class="section-heading">
+                    <p>Discover</p>
+                    <h2>Real template gallery</h2>
+                </div>
+
+                <div class="search-wrap">
+                    <input type="text" id="search" placeholder="Search templates, styles, frameworks..." aria-label="Search templates">
+                </div>
+
+                <div class="gallery-filters" aria-label="Template filters">
+                    <button type="button" class="gallery-filter active" data-filter="all">All</button>
+                    <button type="button" class="gallery-filter" data-filter="landing">Landing</button>
+                    <button type="button" class="gallery-filter" data-filter="saas">SaaS</button>
+                    <button type="button" class="gallery-filter" data-filter="dashboard">Dashboard</button>
+                    <button type="button" class="gallery-filter" data-filter="marketing">Marketing</button>
+                </div>
+
+                <div class="premium-strip" aria-label="Platform advantages">
+                    <article class="premium-card reveal-card">
+                        <span class="premium-tag">Conversion</span>
+                        <strong>3.4x</strong>
+                        <p>Sharper design systems that keep attention high.</p>
+                    </article>
+                    <article class="premium-card reveal-card">
+                        <span class="premium-tag">Velocity</span>
+                        <strong>2.1x</strong>
+                        <p>Templates designed to move projects from idea to launch.</p>
+                    </article>
+                    <article class="premium-card reveal-card">
+                        <span class="premium-tag">Trust</span>
+                        <strong>92%</strong>
+                        <p>Repeat customers build on the same polished stack.</p>
+                    </article>
+                </div>
+
+                <div class="template-grid">
+                    <article class="template-card template-card-featured reveal-card" data-category="landing">
+                        <div class="template-visual visual-one">
+                            <span class="mini-window"></span>
+                            <span class="mini-window small"></span>
+                        </div>
+                        <div class="template-meta">
+                            <span class="template-featured-label">Featured collection</span>
+                            <div class="template-topline">
+                                <span class="template-tag">Landing</span>
+                                <span class="template-rating">4.9</span>
+                            </div>
+                            <h3>Nova Launch</h3>
+                            <p>High-converting SaaS homepage with smart conversion blocks.</p>
+                            <div class="template-bottom">
+                                <span>HTML • CSS</span>
+                                <a href="dashboard.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="saas">
+                        <div class="template-visual visual-two">
+                            <span class="mini-window"></span>
+                            <span class="mini-window wide"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">SaaS</span>
+                                <span class="template-rating">4.8</span>
+                            </div>
+                            <h3>Orbit Pro</h3>
+                            <p>Elegant pricing and hero layout designed for product teams.</p>
+                            <div class="template-bottom">
+                                <span>CSS • JS</span>
+                                <a href="javascript.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="dashboard">
+                        <div class="template-visual visual-three">
+                            <span class="mini-window"></span>
+                            <span class="mini-window narrow"></span>
+                            <span class="mini-window bar"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Dashboard</span>
+                                <span class="template-rating">5.0</span>
+                            </div>
+                            <h3>Signal Board</h3>
+                            <p>Analytics-first workspace for teams tracking product performance.</p>
+                            <div class="template-bottom">
+                                <span>JS • HTML</span>
+                                <a href="dashboard.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="marketing">
+                        <div class="template-visual visual-four">
+                            <span class="mini-window"></span>
+                            <span class="mini-window small"></span>
+                            <span class="mini-window bar"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Marketing</span>
+                                <span class="template-rating">4.7</span>
+                            </div>
+                            <h3>Brand Lift</h3>
+                            <p>Campaign landing page focused on storytelling and acquisition.</p>
+                            <div class="template-bottom">
+                                <span>HTML • PHP</span>
+                                <a href="php.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="landing">
+                        <div class="template-visual visual-five">
+                            <span class="mini-window"></span>
+                            <span class="mini-window wide"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Landing</span>
+                                <span class="template-rating">4.9</span>
+                            </div>
+                            <h3>Arc Studio</h3>
+                            <p>Minimal product launch page with crisp, premium messaging.</p>
+                            <div class="template-bottom">
+                                <span>HTML</span>
+                                <a href="html.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="dashboard">
+                        <div class="template-visual visual-six">
+                            <span class="mini-window"></span>
+                            <span class="mini-window bar"></span>
+                            <span class="mini-window narrow"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Dashboard</span>
+                                <span class="template-rating">4.8</span>
+                            </div>
+                            <h3>Pulse CRM</h3>
+                            <p>Smart operations dashboard for project and customer management.</p>
+                            <div class="template-bottom">
+                                <span>Python • UI</span>
+                                <a href="python.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="saas">
+                        <div class="template-visual visual-seven">
+                            <span class="mini-window"></span>
+                            <span class="mini-window wide"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">SaaS</span>
+                                <span class="template-rating">4.9</span>
+                            </div>
+                            <h3>Northstar Pricing</h3>
+                            <p>A clear plan comparison with a focused upgrade path.</p>
+                            <div class="template-bottom">
+                                <span>HTML • CSS</span>
+                                <a href="css.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="dashboard">
+                        <div class="template-visual visual-eight">
+                            <span class="mini-window"></span>
+                            <span class="mini-window bar"></span>
+                            <span class="mini-window narrow"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Dashboard</span>
+                                <span class="template-rating">4.8</span>
+                            </div>
+                            <h3>Metric Loom</h3>
+                            <p>A compact analytics view for the numbers that matter.</p>
+                            <div class="template-bottom">
+                                <span>HTML • JS</span>
+                                <a href="javascript.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="marketing">
+                        <div class="template-visual visual-nine">
+                            <span class="mini-window"></span>
+                            <span class="mini-window small"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Marketing</span>
+                                <span class="template-rating">4.7</span>
+                            </div>
+                            <h3>Tidal Stories</h3>
+                            <p>A customer story layout built around proof and outcomes.</p>
+                            <div class="template-bottom">
+                                <span>HTML • CSS</span>
+                                <a href="php.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="landing">
+                        <div class="template-visual visual-ten">
+                            <span class="mini-window"></span>
+                            <span class="mini-window wide"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Landing</span>
+                                <span class="template-rating">5.0</span>
+                            </div>
+                            <h3>Sculpt Launch</h3>
+                            <p>A product launch page with a strong editorial rhythm.</p>
+                            <div class="template-bottom">
+                                <span>HTML</span>
+                                <a href="html.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="saas">
+                        <div class="template-visual visual-eleven">
+                            <span class="mini-window"></span>
+                            <span class="mini-window bar"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">SaaS</span>
+                                <span class="template-rating">4.8</span>
+                            </div>
+                            <h3>Formline Signup</h3>
+                            <p>A low-friction account creation flow for new products.</p>
+                            <div class="template-bottom">
+                                <span>HTML • JS</span>
+                                <a href="javascript.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card reveal-card" data-category="dashboard">
+                        <div class="template-visual visual-twelve">
+                            <span class="mini-window"></span>
+                            <span class="mini-window small"></span>
+                            <span class="mini-window bar"></span>
+                        </div>
+                        <div class="template-meta">
+                            <div class="template-topline">
+                                <span class="template-tag">Dashboard</span>
+                                <span class="template-rating">4.9</span>
+                            </div>
+                            <h3>Signal Inbox</h3>
+                            <p>A tidy notification center for product and team updates.</p>
+                            <div class="template-bottom">
+                                <span>HTML • CSS</span>
+                                <a href="python.html">Open</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="features" class="feature-section">
+                <div class="section-heading">
+                    <p>Why teams choose us</p>
+                    <h2>Built to grow with your workflow</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Performance-first</h3>
+                        <p>Optimized layouts and clean code structure reduce friction and keep your pages blazing fast.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Premium aesthetics</h3>
+                        <p>Modern gradients, elevated spacing, and polished interaction patterns create standout experiences.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🧩</div>
+                        <h3>Reusable building blocks</h3>
+                        <p>Mix and match components to create landing pages, product showcases, and dashboards faster.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="discover" class="showcase">
+                <div class="showcase-panel">
+                    <p class="eyebrow secondary">All-in-one platform</p>
+                    <h2>From concept to launch in one smooth workflow.</h2>
+                    <ul>
+                        <li>Streamlined template discovery</li>
+                        <li>Clean branded UI system</li>
+                        <li>Fast publishing with responsive layouts</li>
+                    </ul>
+                </div>
+                <div class="stats-panel">
+                    <div>
+                        <strong>12k+</strong>
+                        <span>Projects shipped</span>
+                    </div>
+                    <div>
+                        <strong>92%</strong>
+                        <span>Returning clients</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Creative support</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Snippet Studio. Crafted for ambitious creators.</p>
+            <a href="login.html">Get started</a>
+        </footer>
+    </div>
+
+    <div class="preview-modal" id="previewModal" aria-hidden="true">
+        <div class="preview-panel">
+            <div class="preview-header">
+                <div>
+                    <span class="preview-badge">Live preview</span>
+                    <h3>Snippet preview</h3>
+                </div>
+                <button type="button" id="closePreviewBtn" class="close-preview" aria-label="Close preview">Close</button>
+            </div>
+            <iframe id="previewFrame" title="Live snippet preview"></iframe>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

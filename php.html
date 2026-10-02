@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PHP code snippets for Snippet Studio">
+    <title>PHP Templates | Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="index.html#templates">Templates</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <p class="eyebrow">PHP library</p>
+                <h1>Backend-ready snippets</h1>
+                <p>Handle forms, process requests, and build lean server logic with secure, readable patterns for everyday web apps.</p>
+            </section>
+
+            <div class="category-toolbar">
+                <button class="category-btn active" onclick="filterCategory('all', this)">All</button>
+                <button class="category-btn" onclick="filterCategory('form', this)">Form</button>
+                <button class="category-btn" onclick="filterCategory('db', this)">Database</button>
+                <button class="category-btn" onclick="filterCategory('session', this)">Session</button>
+            </div>
+
+            <div class="templates-grid">
+                <article class="template-card" data-category="form">
+                    <span class="tag">Form</span>
+                    <h2>POST handler</h2>
+                    <p>Capture submitted values and validate them before using them in the application.</p>
+                    <pre class="code" id="php-form">if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+    if (!$email) {
+        die('Invalid email address.');
+    }
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('php-form')">Copy</button>
+                        <button class="btn preview-btn" data-code="php-form">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="db">
+                    <span class="tag">Database</span>
+                    <h2>PDO query</h2>
+                    <p>Use a consistent prepared-statement pattern for database interaction and safer queries.</p>
+                    <pre class="code" id="php-db">$pdo = new PDO('mysql:host=localhost;dbname=app', 'user', 'password');
+$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+$stmt->execute(['email' => $email]);
+$user = $stmt->fetch();</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('php-db')">Copy</button>
+                        <button class="btn preview-btn" data-code="php-db">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="session">
+                    <span class="tag">Session</span>
+                    <h2>Auth session</h2>
+                    <p>Start user sessions securely and keep access consistent across requests.</p>
+                    <pre class="code" id="php-session">session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('php-session')">Copy</button>
+                        <button class="btn preview-btn" data-code="php-session">Preview</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="noResults">
+                <h2>No PHP patterns found.</h2>
+                <p>Try another category like form, database, or session.</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>Server-side patterns that scale cleanly.</p>
+            <a href="index.html">Back to home</a>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

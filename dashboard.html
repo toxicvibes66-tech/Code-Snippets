@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta
+    name="description"
+    content="Snippet Studio advanced creator dashboard"
+>
+
+<meta name="theme-color" content="#070b14">
+
+<title>Dashboard | Snippet Studio</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+
+</head>
+
+<body class="dashboard-page">
+
+<div class="app-shell">
+
+
+<!-- MOBILE OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="dashboard-sidebar" id="dashboardSidebar">
+
+    <div class="sidebar-top">
+
+        <a href="#" class="sidebar-brand">
+            <span class="brand-mark">S</span>
+
+            <span class="brand-text">
+                <strong>Snippet</strong>
+                <small>Studio</small>
+            </span>
+        </a>
+
+        <button
+            class="mobile-close"
+            id="mobileClose"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <!-- WORKSPACE SELECTOR -->
+    <button class="workspace-selector" id="workspaceSelector">
+
+        <span class="workspace-icon">⌘</span>
+
+        <span class="workspace-info">
+            <strong>Creator Space</strong>
+            <small>Personal workspace</small>
+        </span>
+
+        <span class="workspace-arrow">⌄</span>
+
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="sidebar-nav">
+
+        <p class="nav-label">Workspace</p>
+
+        <a href="#" class="nav-item active" data-section="Overview">
+            <span class="nav-icon">⌂</span>
+            <span>Overview</span>
+            <span class="nav-count">01</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Templates">
+            <span class="nav-icon">▣</span>
+            <span>Templates</span>
+            <span class="nav-count">24</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Collections">
+            <span class="nav-icon">◫</span>
+            <span>Collections</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Analytics">
+            <span class="nav-icon">◒</span>
+            <span>Analytics</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Team">
+            <span class="nav-icon">♙</span>
+            <span>Team</span>
+            <span class="nav-badge">3</span>
+        </a>
+
+        <p class="nav-label">Account</p>
+
+        <a href="#" class="nav-item" data-section="Billing">
+            <span class="nav-icon">◇</span>
+            <span>Billing</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Settings">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+        <a href="#" class="nav-item" data-section="Help">
+            <span class="nav-icon">?</span>
+            <span>Help center</span>
+        </a>
+
+        <button type="button" class="nav-item" data-logout>
+            <span class="nav-icon">↪</span>
+            <span>Sign out</span>
+        </button>
+
+    </nav>
+
+    <!-- ACCOUNT -->
+    <div class="sidebar-bottom">
+
+        <div class="storage-card">
+
+            <div class="storage-heading">
+                <span>Account session</span>
+                <strong>Secure</strong>
+            </div>
+
+            <div class="storage-meter">
+                <span style="width:100%"></span>
+            </div>
+
+            <p>
+                <strong data-user-name>Signed in</strong>
+                protected by a server session
+            </p>
+
+            <button type="button" data-logout>
+                Sign out
+                <span>→</span>
+            </button>
+
+        </div>
+
+        <!-- USER -->
+        <button class="sidebar-user" id="profileButton">
+
+            <span class="avatar">TV</span>
+
+            <span class="user-details">
+                <strong data-user-name>Account</strong>
+                <small>Personal workspace</small>
+            </span>
+
+            <span class="user-menu">•••</span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+<!-- MAIN -->
+<main class="dashboard-main">
+
+    <!-- TOPBAR -->
+    <header class="dashboard-topbar">
+
+        <div class="topbar-left">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+                aria-label="Open navigation"
+            >
+                ☰
+            </button>
+
+            <div>
+                <p class="eyebrow">Workspace</p>
+                <h1 id="pageTitle">Creator dashboard</h1>
+            </div>
+
+        </div>
+
+        <div class="topbar-actions">
+
+            <!-- SEARCH -->
+            <div class="global-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="globalSearch"
+                    placeholder="Search snippets..."
+                    autocomplete="off"
+                >
+
+                <kbd>⌘ K</kbd>
+
+            </div>
+
+            <!-- THEME -->
+            <button
+                class="icon-button"
+                id="themeToggle"
+                aria-label="Toggle theme"
+                title="Toggle theme"
+            >
+                ☾
+            </button>
+
+            <!-- NOTIFICATIONS -->
+            <button
+                class="icon-button notification-button"
+                id="notificationButton"
+                aria-label="Notifications"
+            >
+                ♢
+                <span class="notification-dot"></span>
+            </button>
+
+            <!-- PUBLISH -->
+            <button class="primary-btn" id="publishButton">
+                <span>＋</span>
+                Publish
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="dashboard-content">
+
+        <!-- WELCOME -->
+        <section class="welcome-row">
+
+            <div>
+                <p class="eyebrow secondary">October 2, 2026</p>
+
+                <h2>
+                    Welcome back, Creator.
+                    <span>✦</span>
+                </h2>
+
+                <p class="welcome-description">
+                    Here's what's happening across your Snippet Studio workspace.
+                </p>
+            </div>
+
+            <div class="live-clock-wrap">
+                <span class="live-pulse"></span>
+                <span id="liveClock">--:--:--</span>
+                <small>LIVE</small>
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <article class="stat-card accent">
+
+                <div class="stat-top">
+                    <span class="stat-label">My templates</span>
+                    <span class="stat-icon blue">◆</span>
+                </div>
+
+                <strong
+                    class="stat-value"
+                    id="activeProjectsValue"
+                    data-value="128"
+                >
+                    0
+                </strong>
+
+                <div class="stat-footer">
+                    <span class="trend positive">Saved</span>
+                    <small>in your account</small>
+                </div>
+
+                <div class="mini-chart">
+                    <span style="height:30%"></span>
+                    <span style="height:45%"></span>
+                    <span style="height:35%"></span>
+                    <span style="height:55%"></span>
+                    <span style="height:48%"></span>
+                    <span style="height:72%"></span>
+                    <span style="height:65%"></span>
+                    <span style="height:88%"></span>
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-label">Community templates</span>
+                    <span class="stat-icon purple">↓</span>
+                </div>
+
+                <strong
+                    class="stat-value"
+                    id="downloadsValue"
+                    data-value="8400"
+                >
+                    0
+                </strong>
+
+                <div class="stat-footer">
+                    <span class="trend positive">Available</span>
+                    <small>in the library</small>
+                </div>
+
+                <div class="progress-line">
+                    <span style="width:74%"></span>
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-label">Following</span>
+                    <span class="stat-icon green">↗</span>
+                </div>
+
+                <strong
+                    class="stat-value"
+                    id="engagementValue"
+                    data-value="92"
+                >
+                    0%
+                </strong>
+
+                <div class="stat-footer">
+                    <span class="trend positive">Accounts</span>
+                    <small>you follow</small>
+                </div>
+
+                <div class="progress-line">
+                    <span style="width:92%"></span>
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-label">My reviews</span>
+                    <span class="stat-icon orange">$</span>
+                </div>
+
+                <strong
+                    class="stat-value"
+                    id="revenueValue"
+                    data-value="4100"
+                >
+                    $0
+                </strong>
+
+                <div class="stat-footer">
+                    <span class="trend positive">Shared</span>
+                    <small>with the community</small>
+                </div>
+
+                <div class="revenue-line">
+                    <span></span>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- MAIN ANALYTICS -->
+        <section class="dashboard-grid">
+
+            <!-- CHART -->
+            <article class="panel analytics-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <p class="panel-kicker">LIBRARY</p>
+                        <h3>Template categories</h3>
+                    </div>
+
+                    <div class="panel-controls">
+                        <span class="chart-range active">Current library</span>
+                    </div>
+
+                </div>
+
+                <div class="chart-summary">
+                    <strong id="chartTotal">12,842</strong>
+                    <span>templates by category</span>
+                </div>
+
+                <div class="chart-wrapper">
+
+                    <div class="chart-y-axis">
+                        <span>100%</span>
+                        <span>75%</span>
+                        <span>50%</span>
+                        <span>25%</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="chart-area">
+
+                        <div class="chart-grid-lines">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="chart-bars" id="chartBars">
+
+                            <span style="height:28%"></span>
+                            <span style="height:42%"></span>
+                            <span style="height:36%"></span>
+                            <span style="height:58%"></span>
+                            <span style="height:49%"></span>
+                            <span style="height:70%"></span>
+                            <span style="height:84%"></span>
+                            <span style="height:77%"></span>
+                            <span style="height:91%"></span>
+                            <span style="height:80%"></span>
+                            <span style="height:96%"></span>
+                            <span style="height:88%"></span>
+                        </div>
+
+                        <div class="chart-labels">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- RECENT UPLOADS -->
+            <article class="panel uploads-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <p class="panel-kicker">ACTIVITY</p>
+                        <h3>Recent uploads</h3>
+                    </div>
+
+                    <button
+                        class="text-button"
+                        id="viewAllUploads"
+                    >
+                        View all
+                    </button>
+
+                </div>
+
+                <div class="upload-list" id="recentUploadsList">
+
+                    <button class="upload-item">
+
+                        <span class="upload-icon html">H</span>
+
+                        <span class="upload-info">
+                            <strong>Nova Launch</strong>
+                            <small>HTML template</small>
+                        </span>
+
+                        <span class="upload-time">2h</span>
+
+                    </button>
+
+                    <button class="upload-item">
+
+                        <span class="upload-icon css">C</span>
+
+                        <span class="upload-info">
+                            <strong>Orbit Pro</strong>
+                            <small>CSS components</small>
+                        </span>
+
+                        <span class="upload-time">5h</span>
+
+                    </button>
+
+                    <button class="upload-item">
+
+                        <span class="upload-icon js">JS</span>
+
+                        <span class="upload-info">
+                            <strong>Pulse CRM</strong>
+                            <small>JavaScript kit</small>
+                        </span>
+
+                        <span class="upload-time">1d</span>
+
+                    </button>
+
+                    <button class="upload-item">
+
+                        <span class="upload-icon ui">UI</span>
+
+                        <span class="upload-info">
+                            <strong>Vision UI</strong>
+                            <small>Design system</small>
+                        </span>
+
+                        <span class="upload-time">2d</span>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- LOWER GRID -->
+        <section class="bottom-grid">
+
+            <!-- TEMPLATE CATEGORIES -->
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <p class="panel-kicker">LIBRARY</p>
+                        <h3>Catalog overview</h3>
+                    </div>
+
+                </div>
+
+                <div class="team-list" id="categoryBreakdown"></div>
+
+            </article>
+
+            <!-- QUICK ACTIONS -->
+            <article class="panel quick-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <p class="panel-kicker">TOOLS</p>
+                        <h3>Quick actions</h3>
+                    </div>
+
+                </div>
+
+                <div class="quick-actions">
+
+                    <button data-action="new-template">
+                        <span class="quick-icon blue">＋</span>
+                        <span>
+                            <strong>New template</strong>
+                            <small>Create from scratch</small>
+                        </span>
+                        <b>→</b>
+                    </button>
+
+                    <button data-action="invite-team">
+                        <span class="quick-icon purple">♙</span>
+                        <span>
+                            <strong>Invite team</strong>
+                            <small>Requires email setup</small>
+                        </span>
+                        <b>→</b>
+                    </button>
+
+                    <button data-action="export-pack">
+                        <span class="quick-icon green">↓</span>
+                        <span>
+                            <strong>Export pack</strong>
+                            <small>Download workspace</small>
+                        </span>
+                        <b>→</b>
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <span>
+                © 2026 Snippet Studio
+            </span>
+
+            <span class="footer-status">
+                <i></i>
+                All systems operational
+            </span>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</main>
+
+
+</div>
+
+<!-- PUBLISH MODAL -->
+
+<div class="modal-backdrop" id="publishModal">
+
+
+<div class="modal">
+
+    <button class="modal-close" data-close-modal>×</button>
+
+    <div class="modal-icon">↑</div>
+
+    <p class="panel-kicker">PUBLISH</p>
+
+    <h2>Publish your project</h2>
+
+    <p>
+        Make your latest snippet available to your workspace.
+    </p>
+
+    <label>
+        Project name
+        <input
+            type="text"
+            id="projectName"
+            value="Nova Launch"
+            placeholder="Enter project name"
+        >
+    </label>
+
+    <label>
+        Visibility
+        <select id="projectVisibility">
+            <option>Private</option>
+            <option>Workspace</option>
+            <option>Public</option>
+        </select>
+    </label>
+
+    <button class="primary-btn modal-submit" id="confirmPublish">
+        Publish project
+    </button>
+
+</div>
+
+
+</div>
+
+<!-- QUICK ACTION MODAL -->
+
+<div class="modal-backdrop" id="actionModal">
+
+
+<div class="modal">
+
+    <button class="modal-close" data-close-modal>×</button>
+
+    <div class="modal-icon" id="actionModalIcon">＋</div>
+
+    <p class="panel-kicker">QUICK ACTION</p>
+
+    <h2 id="actionModalTitle">New template</h2>
+
+    <p id="actionModalDescription">
+        Start a new template project.
+    </p>
+
+    <input
+        class="modal-input"
+        id="actionInput"
+        placeholder="Enter a name..."
+    >
+
+    <button
+        class="primary-btn modal-submit"
+        id="confirmAction"
+    >
+        Continue
+    </button>
+
+</div>
+
+
+</div>
+
+<!-- NOTIFICATION PANEL -->
+
+<div class="notification-panel" id="notificationPanel">
+
+
+<div class="notification-header">
+    <strong>Notifications</strong>
+    <button id="markNotifications">Mark all read</button>
+</div>
+
+<div class="notification-item unread">
+    <span class="notification-icon blue">↑</span>
+    <div>
+        <strong>Project published</strong>
+        <p>Nova Launch was published successfully.</p>
+        <small>2 hours ago</small>
+    </div>
+</div>
+
+<div class="notification-item">
+    <span class="notification-icon purple">♙</span>
+    <div>
+        <strong>New team invitation</strong>
+        <p>A collaborator requested workspace access.</p>
+        <small>5 hours ago</small>
+    </div>
+</div>
+
+<div class="notification-item">
+    <span class="notification-icon green">✓</span>
+    <div>
+        <strong>Backup completed</strong>
+        <p>Your workspace backup is ready.</p>
+        <small>Yesterday</small>
+    </div>
+</div>
+
+
+</div>
+
+<!-- TOAST -->
+
+<div
+    class="dashboard-toast"
+    id="dashboardToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+<script src="dashboard-api.js"></script>
+
+</body>
+</html>

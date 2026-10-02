@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python code snippets for Snippet Studio">
+    <title>Python Templates | Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="index.html#templates">Templates</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <p class="eyebrow">Python library</p>
+                <h1>Automation and logic patterns</h1>
+                <p>Speed up back-end tasks, data work, and app logic with simple, maintainable Python examples designed for real-world use.</p>
+            </section>
+
+            <div class="category-toolbar">
+                <button class="category-btn active" onclick="filterCategory('all', this)">All</button>
+                <button class="category-btn" onclick="filterCategory('data', this)">Data</button>
+                <button class="category-btn" onclick="filterCategory('api', this)">API</button>
+                <button class="category-btn" onclick="filterCategory('script', this)">Script</button>
+            </div>
+
+            <div class="templates-grid">
+                <article class="template-card" data-category="data">
+                    <span class="tag">Data</span>
+                    <h2>CSV reader</h2>
+                    <p>Read structured files quickly and handle rows in a clean, scalable way.</p>
+                    <pre class="code" id="py-csv">import csv
+
+with open('data.csv', newline='') as file:
+    rows = csv.DictReader(file)
+    for row in rows:
+        print(row['name'])</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('py-csv')">Copy</button>
+                        <button class="btn preview-btn" data-code="py-csv">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="api">
+                    <span class="tag">API</span>
+                    <h2>HTTP request</h2>
+                    <p>Request JSON data from an external service and handle the response in a predictable way.</p>
+                    <pre class="code" id="py-api">import requests
+
+response = requests.get('https://api.example.com/items')
+response.raise_for_status()
+items = response.json()
+print(items)</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('py-api')">Copy</button>
+                        <button class="btn preview-btn" data-code="py-api">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="script">
+                    <span class="tag">Script</span>
+                    <h2>Automation</h2>
+                    <p>Automate repetitive operations with a small script that is easy to extend and maintain.</p>
+                    <pre class="code" id="py-script">def main():
+    for i in range(3):
+        print(f'Running task {i + 1}')
+
+if __name__ == '__main__':
+    main()</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('py-script')">Copy</button>
+                        <button class="btn preview-btn" data-code="py-script">Preview</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="noResults">
+                <h2>No Python patterns found.</h2>
+                <p>Try another keyword like data, API, or script.</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>Python for logic, automation, and speed.</p>
+            <a href="index.html">Back to home</a>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

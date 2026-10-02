@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS snippet library for Snippet Studio">
+    <title>CSS Templates | Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="index.html#templates">Templates</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <p class="eyebrow">CSS library</p>
+                <h1>Modern styling patterns</h1>
+                <p>Build flexible layouts, layered surfaces, and polished interfaces with reusable CSS recipes for real production work.</p>
+            </section>
+
+            <div class="category-toolbar">
+                <button class="category-btn active" onclick="filterCategory('all', this)">All</button>
+                <button class="category-btn" onclick="filterCategory('layout', this)">Layout</button>
+                <button class="category-btn" onclick="filterCategory('card', this)">Cards</button>
+                <button class="category-btn" onclick="filterCategory('button', this)">Buttons</button>
+            </div>
+
+            <div class="templates-grid" id="templateList">
+                <article class="template-card" data-category="layout">
+                    <span class="tag">Layout</span>
+                    <h2>Center column</h2>
+                    <p>Use a clean centered container to keep content readable and balanced across screen sizes.</p>
+                    <pre class="code" id="css-layout">.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('css-layout')">Copy</button>
+                        <button class="btn preview-btn" data-code="css-layout">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="card">
+                    <span class="tag">Card</span>
+                    <h2>Glass panel</h2>
+                    <p>Highlight features or pricing blocks with a layered glass surface and subtle blur.</p>
+                    <pre class="code" id="css-card">.glass-panel {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('css-card')">Copy</button>
+                        <button class="btn preview-btn" data-code="css-card">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="button">
+                    <span class="tag">Button</span>
+                    <h2>Primary CTA</h2>
+                    <p>Give users a polished call to action with layered gradients, strong contrast, and hover motion.</p>
+                    <pre class="code" id="css-button">.primary-btn {
+  background: linear-gradient(135deg, #5b6cff, #7a5cff);
+  color: white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('css-button')">Copy</button>
+                        <button class="btn preview-btn" data-code="css-button">Preview</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="noResults">
+                <h2>No CSS patterns found.</h2>
+                <p>Try searching for a different style or category.</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>Design systems for faster execution.</p>
+            <a href="index.html">Back to home</a>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

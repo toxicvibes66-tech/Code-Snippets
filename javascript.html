@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript snippet library for Snippet Studio">
+    <title>JavaScript Templates | Snippet Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand" aria-label="Snippet Studio home">
+                <span class="brand-mark">S</span>
+                <span>Snippet Studio</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="dropdown">
+                    <button type="button" class="nav-toggle" aria-expanded="false">
+                        About <span class="caret">▾</span>
+                    </button>
+                    <div class="menu" id="menu">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <a href="index.html#templates">Templates</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#discover">Discover</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <p class="eyebrow">JavaScript library</p>
+                <h1>Interaction patterns</h1>
+                <p>Use small, practical scripts to power dropdowns, search, theme switching, and smooth user feedback without bloated code.</p>
+            </section>
+
+            <div class="category-toolbar">
+                <button class="category-btn active" onclick="filterCategory('all', this)">All</button>
+                <button class="category-btn" onclick="filterCategory('menu', this)">Menu</button>
+                <button class="category-btn" onclick="filterCategory('form', this)">Form</button>
+                <button class="category-btn" onclick="filterCategory('theme', this)">Theme</button>
+            </div>
+
+            <div class="templates-grid">
+                <article class="template-card" data-category="menu">
+                    <span class="tag">Menu</span>
+                    <h2>Dropdown toggle</h2>
+                    <p>Toggle a navigation menu and close it when the user clicks outside the panel.</p>
+                    <pre class="code" id="js-menu">const menuButton = document.querySelector('.nav-toggle');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('js-menu')">Copy</button>
+                        <button class="btn preview-btn" data-code="js-menu">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="theme">
+                    <span class="tag">Theme</span>
+                    <h2>Theme switch</h2>
+                    <p>Persist user preference in local storage and apply it instantly on the next visit.</p>
+                    <pre class="code" id="js-theme">const savedTheme = localStorage.getItem('theme');
+const root = document.body;
+
+if (savedTheme) {
+  root.classList.toggle('dark', savedTheme === 'dark');
+}</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('js-theme')">Copy</button>
+                        <button class="btn preview-btn" data-code="js-theme">Preview</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="form">
+                    <span class="tag">Form</span>
+                    <h2>Validation message</h2>
+                    <p>Display clear validation feedback and keep the experience helpful and accessible.</p>
+                    <pre class="code" id="js-form">const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const input = form.querySelector('input');
+
+  if (!input.value) {
+    console.log('Please complete the field.');
+  }
+});</pre>
+                    <div class="actions">
+                        <button class="btn copy-btn" onclick="copyCode('js-form')">Copy</button>
+                        <button class="btn preview-btn" data-code="js-form">Preview</button>
+                    </div>
+                </article>
+            </div>
+
+            <div id="noResults">
+                <h2>No JavaScript patterns found.</h2>
+                <p>Try another keyword like menu, form, or theme.</p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>JavaScript for practical interactions.</p>
+            <a href="index.html">Back to home</a>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
